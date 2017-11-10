@@ -1,4 +1,4 @@
-@extends('backend.master')
+@extends('admin.master')
 
 
 
@@ -16,17 +16,25 @@
         <div class="col-sm-6 text-right hidden-xs">
           <div class="inline m-r text-left">
             <div class="m-b-xs">1290 <span class="text-muted">items</span></div>
-            <div ng-init="d3_1=[ 106,108,110,105,110,109,105,104,107,109,105,100,105,102,101,99,98 ]" ui-jq="sparkline" ui-options="[ 106,108,110,105,110,109,105,104,107,109,105,100,105,102,101,99,98 ], {type:'bar', height:20, barWidth:5, barSpacing:1, barColor:'#dce5ec'}" class="sparkline inline"><canvas width="202" height="40" style="display: inline-block; width: 101px; height: 20px; vertical-align: top;"></canvas></div>
+            <div ng-init="d3_1=[ 106,108,110,105,110,109,105,104,107,109,105,100,105,102,101,99,98 ]" 
+              ui-jq="sparkline" 
+              ui-options="[ 106,108,110,105,110,109,105,104,107,109,105,100,105,102,101,99,98 ], {type:'bar', height:20, barWidth:5, barSpacing:1, barColor:'#dce5ec'}" 
+              class="sparkline inline">loading...
+            </div>
           </div>
           <div class="inline text-left">
             <div class="m-b-xs">$30,000 <span class="text-muted">revenue</span></div>
-            <div ng-init="d3_2=[ 105,102,106,107,105,104,101,99,98,109,105,100,108,110,105,110,109 ]" ui-jq="sparkline" ui-options="[ 105,102,106,107,105,104,101,99,98,109,105,100,108,110,105,110,109 ], {type:'bar', height:20, barWidth:5, barSpacing:1, barColor:'#dce5ec'}" class="sparkline inline"><canvas width="202" height="40" style="display: inline-block; width: 101px; height: 20px; vertical-align: top;"></canvas></div>
+            <div ng-init="d3_2=[ 105,102,106,107,105,104,101,99,98,109,105,100,108,110,105,110,109 ]" 
+              ui-jq="sparkline" 
+              ui-options="[ 105,102,106,107,105,104,101,99,98,109,105,100,108,110,105,110,109 ], {type:'bar', height:20, barWidth:5, barSpacing:1, barColor:'#dce5ec'}" 
+              class="sparkline inline">loading...
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- / main header -->
-    <div class="wrapper-md" ng-controller="FlotChartDemoCtrl">
+    <div class="wrapper-md" >
       <!-- stats -->
       <div class="row">
         <div class="col-md-5">
@@ -41,7 +49,7 @@
               </div>
             </div>
             <div class="col-xs-6">
-              <a href="" class="block panel padder-v bg-primary item">
+              <a href class="block panel padder-v bg-primary item">
                 <span class="text-white font-thin h1 block">930</span>
                 <span class="text-muted text-xs">Uploads</span>
                 <span class="bottom text-right w-full">
@@ -50,7 +58,7 @@
               </a>
             </div>
             <div class="col-xs-6">
-              <a href="" class="block panel padder-v bg-info item">
+              <a href class="block panel padder-v bg-info item">
                 <span class="text-white font-thin h1 block">432</span>
                 <span class="text-muted text-xs">Comments</span>
                 <span class="top">
@@ -70,7 +78,7 @@
             <div class="col-xs-12 m-b-md">
               <div class="r bg-light dker item hbox no-border">
                 <div class="col w-xs v-middle hidden-md">
-                  <div ng-init="d3_3=[60,40]" ui-jq="sparkline" ui-options="[60,40], {type:'pie', height:40, sliceColors:['#fad733','#fff']}" class="sparkline inline"><canvas width="80" height="80" style="display: inline-block; width: 40px; height: 40px; vertical-align: top;"></canvas></div>
+                  <div ng-init="d3_3=[60,40]" ui-jq="sparkline" ui-options="[60,40], {type:'pie', height:40, sliceColors:['#fad733','#fff']}" class="sparkline inline"></div>
                 </div>
                 <div class="col dk padder-v r-r">
                   <div class="text-primary-dk font-thin h1"><span>$12,670</span></div>
@@ -101,8 +109,8 @@
                 tooltip: true,
                 tooltipOpts: { content: 'Visits of %x.1 is %y.4',  defaultTheme: false, shifts: { x: 10, y: -25 } }
               }
-            " style="height: 246px; padding: 0px; position: relative;">
-            <canvas class="flot-base" width="826" height="492" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 413px; height: 246px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div style="position: absolute; max-width: 41px; top: 233px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 14px; text-align: center;">0</div><div style="position: absolute; max-width: 41px; top: 233px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 58px; text-align: center;">1</div><div style="position: absolute; max-width: 41px; top: 233px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 101px; text-align: center;">2</div><div style="position: absolute; max-width: 41px; top: 233px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 145px; text-align: center;">3</div><div style="position: absolute; max-width: 41px; top: 233px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 188px; text-align: center;">4</div><div style="position: absolute; max-width: 41px; top: 233px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 232px; text-align: center;">5</div><div style="position: absolute; max-width: 41px; top: 233px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 275px; text-align: center;">6</div><div style="position: absolute; max-width: 41px; top: 233px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 319px; text-align: center;">7</div><div style="position: absolute; max-width: 41px; top: 233px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 362px; text-align: center;">8</div><div style="position: absolute; max-width: 41px; top: 233px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 406px; text-align: center;">9</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div style="position: absolute; top: 222px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 6px; text-align: right;">0</div><div style="position: absolute; top: 166px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 6px; text-align: right;">5</div><div style="position: absolute; top: 111px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 0px; text-align: right;">10</div><div style="position: absolute; top: 56px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 0px; text-align: right;">15</div><div style="position: absolute; top: 1px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 0px; text-align: right;">20</div></div></div><canvas class="flot-overlay" width="826" height="492" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 413px; height: 246px;"></canvas><div class="legend"><div style="position: absolute; width: 43px; height: 44px; top: 12px; right: 9px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div><table style="position:absolute;top:12px;right:9px;;font-size:smaller;color:#dce5ec"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(35,183,229);overflow:hidden"></div></div></td><td class="legendLabel">TV</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(114,102,186);overflow:hidden"></div></div></td><td class="legendLabel">Mag</td></tr></tbody></table></div></div>
+            " style="height:246px" >
+            </div>
           </div>
         </div>
       </div>
@@ -127,8 +135,8 @@
               tooltip: true,
               tooltipOpts: { content: '%s of %x.1 is %y.4',  defaultTheme: false, shifts: { x: 10, y: -25 } }
             }
-          " style="height: 240px; padding: 0px; position: relative;">
-          <canvas class="flot-base" width="950" height="480" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 475px; height: 240px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div style="position: absolute; top: 226px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 6px; text-align: right;">0</div><div style="position: absolute; top: 181px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 6px; text-align: right;">2</div><div style="position: absolute; top: 136px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 6px; text-align: right;">4</div><div style="position: absolute; top: 91px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 6px; text-align: right;">6</div><div style="position: absolute; top: 46px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 6px; text-align: right;">8</div><div style="position: absolute; top: 2px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 11px; line-height: 13px; font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(161, 167, 172); left: 0px; text-align: right;">10</div></div></div><canvas class="flot-overlay" width="950" height="480" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 475px; height: 240px;"></canvas></div>
+          " style="height:240px" >
+          </div>
         </div>
         <div class="col wrapper-lg w-lg bg-light dk r-r">
           <h4 class="font-thin m-t-none m-b">Reports</h4>
@@ -164,24 +172,24 @@
       <div class="panel wrapper">
         <div class="row">
           <div class="col-md-6 b-r b-light no-border-xs">
-            <a href="" class="text-muted pull-right text-lg"><i class="icon-arrow-right"></i></a>
+            <a href class="text-muted pull-right text-lg"><i class="icon-arrow-right"></i></a>
             <h4 class="font-thin m-t-none m-b-md text-muted">My Tasks</h4>
             <div class=" m-b">
               <div class="m-b">
                 <span class="label text-base bg-warning pos-rlt m-r"><i class="arrow right arrow-warning"></i> 19:30</span>
-                <a href="">Feed cat</a>
+                <a href>Feed cat</a>
               </div>
               <div class="m-b">
                 <span class="label text-base bg-info pos-rlt m-r"><i class="arrow right arrow-info"></i> 12:30</span>
-                <a href="">Fishing Time</a>
+                <a href>Fishing Time</a>
               </div>
               <div class="m-b">
                 <span class="label text-base bg-primary pos-rlt m-r"><i class="arrow right arrow-primary"></i> 10:30</span>
-                <a href="">Kick-off meeting</a>
+                <a href>Kick-off meeting</a>
               </div>
               <div class="m-b">
                 <span class="label text-base bg-light pos-rlt m-r"><i class="arrow right arrow-light"></i> 07:30</span>
-                <a href="">Morning running</a>
+                <a href>Morning running</a>
               </div>
             </div>
           </div>
@@ -197,11 +205,11 @@
                     size: 115,
                     rotate: 90,
                     lineCap: 'butt'
-                  }" class="inline m-t easyPieChart" style="width: 115px; height: 115px; line-height: 115px;">
+                  }" class="inline m-t">
                   <div>
                     <span class="text-primary h4">75%</span>
                   </div>
-                <canvas width="230" height="230" style="width: 115px; height: 115px;"></canvas></div>
+                </div>
                 <div class="text-muted font-bold text-xs m-t m-b">Work Done</div>
               </div>
               <div class="col-xs-6 text-center">
@@ -214,11 +222,11 @@
                     size: 115,
                     rotate: 180,
                     lineCap: 'butt'
-                  }" class="inline m-t easyPieChart" style="width: 115px; height: 115px; line-height: 115px;">
+                  }" class="inline m-t">
                   <div>
                     <span class="text-info h4">50%</span>
                   </div>
-                <canvas width="230" height="230" style="width: 115px; height: 115px;"></canvas></div>
+                </div>
                 <div class="text-muted font-bold text-xs m-t m-b">Started</div>
               </div>
             </div>            
@@ -241,32 +249,32 @@
             </div>
             <ul class="list-group list-group-lg m-b-none">
               <li class="list-group-item">
-                <a href="" class="thumb-sm m-r">
+                <a href class="thumb-sm m-r">
                   <img src="img/a1.jpg" class="r r-2x">
                 </a>
                 <span class="pull-right label bg-primary inline m-t-sm">Admin</span>
-                <a href="">Damon Parker</a>
+                <a href>Damon Parker</a>
               </li>
               <li class="list-group-item">
-                <a href="" class="thumb-sm m-r">
+                <a href class="thumb-sm m-r">
                   <img src="img/a2.jpg" class="r r-2x">
                 </a>
                 <span class="pull-right label bg-info inline m-t-sm">Member</span>
-                <a href="">Joe Waston</a>
+                <a href>Joe Waston</a>
               </li>
               <li class="list-group-item">
-                <a href="" class="thumb-sm m-r">
+                <a href class="thumb-sm m-r">
                   <img src="img/a3.jpg" class="r r-2x">
                 </a>
                 <span class="pull-right label bg-warning inline m-t-sm">Editor</span>
-                <a href="">Jannie Dvis</a>
+                <a href>Jannie Dvis</a>
               </li>
               <li class="list-group-item">
-                <a href="" class="thumb-sm m-r">
+                <a href class="thumb-sm m-r">
                   <img src="img/a4.jpg" class="r r-2x">
                 </a>
                 <span class="pull-right label bg-warning inline m-t-sm">Editor</span>
-                <a href="">Emma Welson</a>
+                <a href>Emma Welson</a>
               </li>
             </ul>
             <div class="panel-footer">
@@ -277,7 +285,7 @@
         </div>
         <div class="col-md-6">            
           <div class="list-group list-group-lg list-group-sp">
-            <a herf="" class="list-group-item clearfix">
+            <a herf class="list-group-item clearfix">
               <span class="pull-left thumb-sm avatar m-r">
                 <img src="img/a4.jpg" alt="...">
                 <i class="on b-white right"></i>
@@ -287,7 +295,7 @@
                 <small class="text-muted clear text-ellipsis">What's up, buddy</small>
               </span>
             </a>
-            <a herf="" class="list-group-item clearfix">
+            <a herf class="list-group-item clearfix">
               <span class="pull-left thumb-sm avatar m-r">
                 <img src="img/a5.jpg" alt="...">
                 <i class="on b-white right"></i>
@@ -297,7 +305,7 @@
                 <small class="text-muted clear text-ellipsis">Come online and we need talk about the plans that we have discussed</small>
               </span>
             </a>
-            <a herf="" class="list-group-item clearfix">
+            <a herf class="list-group-item clearfix">
               <span class="pull-left thumb-sm avatar m-r">
                 <img src="img/a6.jpg" alt="...">
                 <i class="busy b-white right"></i>
@@ -307,7 +315,7 @@
                 <small class="text-muted clear text-ellipsis">Hey, Some good news</small>
               </span>
             </a>
-            <a herf="" class="list-group-item clearfix">
+            <a herf class="list-group-item clearfix">
               <span class="pull-left thumb-sm avatar m-r">
                 <img src="img/a7.jpg" alt="...">
                 <i class="busy b-white right"></i>
@@ -317,7 +325,7 @@
                 <small class="text-muted clear text-ellipsis">Nice to talk with you.</small>
               </span>
             </a>
-            <a herf="" class="list-group-item clearfix">
+            <a herf class="list-group-item clearfix">
               <span class="pull-left thumb-sm avatar m-r">
                 <img src="img/a8.jpg" alt="...">
                 <i class="away b-white right"></i>

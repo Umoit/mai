@@ -1,5 +1,4 @@
- <!-- header -->
-  <header id="header" class="app-header navbar" role="menu">
+<header id="header" class="app-header navbar" role="menu">
       <!-- navbar header -->
       <div class="navbar-header bg-dark">
         <button class="pull-right visible-xs dk" ui-toggle-class="show" target=".navbar-collapse">
@@ -12,7 +11,7 @@
         <a href="#/" class="navbar-brand text-lt">
           <i class="fa fa-btc"></i>
           <img src="img/logo.png" alt="." class="hide">
-          <span class="hidden-folded m-l-xs">Test</span>
+          <span class="hidden-folded m-l-xs">Angulr</span>
         </a>
         <!-- / brand -->
       </div>
@@ -22,11 +21,11 @@
       <div class="collapse pos-rlt navbar-collapse box-shadow bg-white-only">
         <!-- buttons -->
         <div class="nav navbar-nav hidden-xs">
-          <a href="#" class="btn no-shadow navbar-btn" ui-toggle="app-aside-folded" target=".app">
+          <a href="#" class="btn no-shadow navbar-btn" ui-toggle-class="app-aside-folded" target=".app">
             <i class="fa fa-dedent fa-fw text"></i>
             <i class="fa fa-indent fa-fw text-active"></i>
           </a>
-          <a href="#" class="btn no-shadow navbar-btn" ui-toggle="show" target="#aside-user">
+          <a href="#" class="btn no-shadow navbar-btn" ui-toggle-class="show" target="#aside-user">
             <i class="icon-user fa-fw"></i>
           </a>
         </div>
@@ -47,32 +46,32 @@
                     <div class="col-xs-6">
                       <ul class="list-unstyled l-h-2x">
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Profile</a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Profile</a>
                         </li>
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Post</a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Post</a>
                         </li>
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Search</a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Search</a>
                         </li>
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Invoice</a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Invoice</a>
                         </li>
                       </ul>
                     </div>
                     <div class="col-xs-6">
                       <ul class="list-unstyled l-h-2x">
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Price</a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Price</a>
                         </li>
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Lock screen</a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Lock screen</a>
                         </li>
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sign in</a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sign in</a>
                         </li>
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sign up</a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sign up</a>
                         </li>
                       </ul>
                     </div>
@@ -84,32 +83,32 @@
                     <div class="col-xs-6">
                       <ul class="list-unstyled l-h-2x">
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Buttons</a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Buttons</a>
                         </li>
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Icons <span class="badge badge-sm bg-warning">1000+</span></a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Icons <span class="badge badge-sm bg-warning">1000+</span></a>
                         </li>
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Grid</a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Grid</a>
                         </li>
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Widgets</a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Widgets</a>
                         </li>
                       </ul>
                     </div>
                     <div class="col-xs-6">
                       <ul class="list-unstyled l-h-2x">
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Bootstap</a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Bootstap</a>
                         </li>
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sortable</a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Sortable</a>
                         </li>
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Portlet</a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Portlet</a>
                         </li>
                         <li>
-                          <a href=""><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Timeline</a>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>Timeline</a>
                         </li>
                       </ul>
                     </div>
@@ -129,8 +128,8 @@
                           rotate: 90,
                           lineCap: 'butt',
                           animate: 2000
-                        }" class="easyPieChart" style="width: 100px; height: 100px; line-height: 100px;">
-                      <canvas width="200" height="200" style="width: 100px; height: 100px;"></canvas></div>
+                        }">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -145,15 +144,15 @@
             <ul class="dropdown-menu" role="menu">
               <li><a href="#" translate="header.navbar.new.PROJECT">Projects</a></li>
               <li>
-                <a href="">
+                <a href>
                   <span class="badge bg-info pull-right">5</span>
                   <span translate="header.navbar.new.TASK">Task</span>
                 </a>
               </li>
-              <li><a href="" translate="header.navbar.new.USER">User</a></li>
+              <li><a href translate="header.navbar.new.USER">User</a></li>
               <li class="divider"></li>
               <li>
-                <a href="">
+                <a href>
                   <span class="badge bg-danger pull-right">4</span>
                   <span translate="header.navbar.new.EMAIL">Email</span>
                 </a>
@@ -191,7 +190,7 @@
                   <strong>You have <span>2</span> notifications</strong>
                 </div>
                 <div class="list-group">
-                  <a href="" class="list-group-item">
+                  <a href class="list-group-item">
                     <span class="pull-left m-r thumb-sm">
                       <img src="img/a0.jpg" alt="..." class="img-circle">
                     </span>
@@ -200,7 +199,7 @@
                       <small class="text-muted">10 minutes ago</small>
                     </span>
                   </a>
-                  <a href="" class="list-group-item">
+                  <a href class="list-group-item">
                     <span class="clear block m-b-none">
                       1.0 initial released<br>
                       <small class="text-muted">1 hour ago</small>
@@ -208,7 +207,7 @@
                   </a>
                 </div>
                 <div class="panel-footer text-sm">
-                  <a href="" class="pull-right"><i class="fa fa-cog"></i></a>
+                  <a href class="pull-right"><i class="fa fa-cog"></i></a>
                   <a href="#notes" data-toggle="class:show animated fadeInRight">See all the notifications</a>
                 </div>
               </div>
@@ -216,7 +215,7 @@
             <!-- / dropdown -->
           </li>
           <li class="dropdown">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle clear">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
               <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
                 <img src="img/a0.jpg" alt="...">
                 <i class="on md b-white bottom"></i>
@@ -234,7 +233,7 @@
                 </div>
               </li>
               <li>
-                <a href="">
+                <a href>
                   <span class="badge bg-danger pull-right">30%</span>
                   <span>Settings</span>
                 </a>
@@ -261,5 +260,3 @@
       <!-- / navbar collapse -->
   </header>
   <!-- / header -->
-
-

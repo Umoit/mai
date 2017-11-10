@@ -15,15 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('admin/login','Admin\IndexController@getLogin');
+Route::post('admin/login','Admin\IndexController@postLogin')->name('admin.login');
 
-Route::group(['prefix'=>'admin'],function(){
-	Route::get('/','Admin\IndexController@index');
-	Route::get('login','Admin\IndexController@getLogin');
-	Route::post('login','Admin\IndexController@postLogin');
+Route::group(['prefix' => 'admin',  'middleware' => 'admin'],function(){
+	Route::get('logout','Admin\IndexController@logout');
+	
+	Route::get('test','Admin\IndexController@test')->name('admin.test');
+
+	Route::get('dashboard','Admin\IndexController@dashboard')->name('admin.dashboard');
+	
+	//产品
+	Route::resource('product','Admin\ProductController');
+	
 });
 
 
-Route::resource('product','Admin\ProductController');
 
 Route::resource('category','Admin\CategoryController');
 
