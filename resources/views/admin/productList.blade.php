@@ -59,18 +59,17 @@
             <div class="table-responsive">
               <table class="table table-striped b-t b-light">
                 <thead>
-                  <tr>
-                    <th style="width:20px;">
-                      <label class="i-checks m-b-none">
-                        <input type="checkbox"><i></i>
-                      </label>
-                    </th>
-                    <th>Project</th>
-                    <th>Task</th>
-                    <th>Date</th>
-                    <th style="width:30px;"></th>
-                  </tr>
-                </thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>图片</th>
+                          <th>SKU</th>
+                          <th>产品名</th>
+                          <th>价格</th>
+                          <th>位置</th>
+                          <th>更新时间</th>
+                          <th>操作</th>
+                        </tr>
+                        </thead>
                 <tbody>
                   <tr>
                     <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
