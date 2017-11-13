@@ -481,11 +481,14 @@ a.list-group-item.hover {
 .table > tfoot > tr > td {
   padding: 8px 15px;
   border-top: 1px solid #eaeff0;
+  vertical-align: middle;
+  
 }
 
 .table > thead > tr > th {
   padding: 8px 15px;
   border-bottom: 1px solid #eaeff0;
+
 }
 
 .table-bordered {
@@ -503,6 +506,7 @@ a.list-group-item.hover {
 .table-striped > tbody > tr:nth-child(odd) > td,
 .table-striped > tbody > tr:nth-child(odd) > th {
   background-color: #fafbfc;
+  vertical-align: middle;
 }
 
 .table-striped > thead > th {
@@ -5193,4 +5197,10 @@ a.text-#000000:hover {
   99.9% {
     background-color: #7266ba;
   }
+}
+
+
+
+.pagination{
+  margin:0px;
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAdminsTables extends Migration
+class CreateBrandsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateAdminsTables extends Migration
      */
     public function up()
     {
-        Schema::create('admins', function (Blueprint $table) {
+        Schema::create('product_brands', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('phone');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->string('name')->unique();
+            $table->string('url_name')->unique();
+            $table->timestamps();  
         });
     }
 
@@ -31,7 +28,6 @@ class CreateAdminsTables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('admins');
-        
+        Schema::dropIfExists('product_brands');
     }
 }

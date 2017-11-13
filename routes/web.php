@@ -26,7 +26,12 @@ Route::group(['prefix' => 'admin',  'middleware' => 'admin'],function(){
 	Route::get('dashboard','Admin\IndexController@dashboard')->name('admin.dashboard');
 	
 	//产品
+	Route::get('product/{id}/delete', 'Admin\ProductController@delete')->name('product.delete');
 	Route::resource('product','Admin\ProductController');
+
+
+	//上传
+	Route::post('image/upload','Admin\FileController@imageUpload')->name('image.upload');
 	
 });
 

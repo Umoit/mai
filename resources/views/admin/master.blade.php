@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="{{asset('admin/assets/simple-line-icons/css/simple-line-icons.css')}}" type="text/css" />
     <link rel="stylesheet" href="{{asset('admin/jquery/bootstrap/dist/css/bootstrap.css')}}" type="text/css" />
 
-    <link rel="stylesheet" href="{{asset('admin/css/font.css')}}" type="text/css" />
     <link rel="stylesheet" href="{{asset('admin/css/app.css')}}" type="text/css" />
 
 
@@ -34,7 +33,7 @@
             <div id="content" class="app-content" role="main">
                 <div class="app-content-body ">
                    
-                    @include('admin.messages')
+                    <!-- @include('admin.messages') -->
 
                     @yield('content')
 
@@ -63,9 +62,14 @@
     <script src="{{asset('admin/js/ui-nav.js') }}"></script>
     <script src="{{asset('admin/js/ui-toggle.js') }}"></script>
     <script src="{{asset('admin/js/ui-client.js') }}"></script>
+    <script src="{{asset('admin/bootstrap-notify.min.js') }}"></script>
+
+
 
     
   @yield('after-js')
+
+  @include('admin.notify')
   
   </body>
   

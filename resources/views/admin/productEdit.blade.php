@@ -1,7 +1,8 @@
-@extends('backend.master')
+@extends('admin.master')
 
 @section('after-css')
-    <link href="{{ URL::asset('/') }}backend/plugins/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{asset('admin/css/fileinput.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('admin/file-upload/themes/explorer-fa/theme.min.css') }}" rel="stylesheet" type="text/css" />
   
 @endsection
 
@@ -124,14 +125,14 @@
                   </div>
                 <div class="form-group">
                   <label name="img" class="col-sm-2 control-label">产品图</label>
-                  <div class="col-sm-4">
-                    <input type="file"  class="file" id="img_url" name="image_data[]"  accept="image/*" multiple>
+                  <div class="col-sm-10">
+                    <input type="file"  class="file" id="img_url" name="image_data"  accept="image/*" multiple>
   
                   </div>
-                  <div class="col-sm-6">
+                 <!--  <div class="col-sm-6">
                     <input type="file"  class="file" id="img_url" name="image_data[]"  accept="image/*" multiple>
   
-                  </div>
+                  </div> -->
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">详细内容</label>
@@ -180,7 +181,7 @@
               <!-- /.box-body -->
               <div class="box-footer ">
               <div class="col-sm-10 col-sm-offset-2">
-                <button type="submit" class="btn btn-success">发布产品</button>
+                <button type="submit" class="btn btn-success">更新产品</button>
                 <button  class="btn btn-info ">发布并新增</button>
                 </div>
               </div>
@@ -234,32 +235,54 @@
     
 
 @section('after-js')
-  <script src="{{ URL::asset('/') }}backend/plugins/bootstrap-fileinput/js/plugins/sortable.min.js" ></script>
-  <script src="{{ URL::asset('/') }}backend/plugins/bootstrap-fileinput/js/plugins/purify.min.js" ></script>
+  <script src="{{asset('admin/file-upload/js/plugins/sortable.min.js') }}" ></script>
+  <script src="{{asset('admin/file-upload/js/plugins/purify.min.js') }}" ></script>
 
-  <script src="{{ URL::asset('/') }}backend/plugins/bootstrap-fileinput/js/fileinput.min.js" ></script>
-  <script src="{{ URL::asset('/') }}backend/plugins/bootstrap-fileinput/js/locales/zh.js" ></script>
+  <script src="{{asset('admin/file-upload/js/fileinput.js') }}" ></script>
+  <script src="{{asset('admin/file-upload/js/locales/zh.js') }}" ></script>
+  <script src="{{asset('admin/file-upload/themes/explorer-fa/theme.js') }}" ></script>
 
   <script>
-    $(".file").fileinput({
-        language : 'zh',
-        uploadUrl: '{{route('image.upload')}}', // you must set a valid URL here else you will get an error
-        allowedFileExtensions : ['jpg', 'png','gif'],
-        overwriteInitial: false,
-        maxFileSize: 190,
-        showUpload: true,
-        uploadExtraData: { '_token':'{{csrf_token()}}' },  
-        //allowedFileTypes: ['image', 'video', 'flash'],
-        slugCallback: function(filename) {
-           // return filename.replace('(', '_').replace(']', '_');
-        }
-    });
-    $(".file").on("fileuploaded", function (event, data, previewId, index) {
+  $("#img_url").fileinput({
+            theme: 'explorer-fa',
+            uploadUrl: '{{route('image.upload')}}',
+            allowedFileExtensions : ['jpg', 'png','gif'],
+            overwriteInitial: false,
+            initialPreviewAsData: true,
+            maxFileSize: 190,
+            showUpload: true,
+            uploadExtraData: { '_token':'{{csrf_token()}}' }, 
+            initialPreview: [
+                "http://lorempixel.com/1920/1080/nature/1"
+            ],
+            initialPreviewConfig: [
+                {caption: "nature-1.jpg", size: 329892, width: "120px", url: "{$url}", key: 1}
+             
+            ]
+        });
+
+
+    // $("#img_url").fileinput({
+    //     language : 'zh',
+    //     uploadUrl: '{{route('image.upload')}}', // you must set a valid URL here else you will get an error
+    //     allowedFileExtensions : ['jpg', 'png','gif'],
+    //     overwriteInitial: false,
+    //     maxFileSize: 190,
+    //     showUpload: true,
+    //     uploadExtraData: { '_token':'{{csrf_token()}}' },  
+    //     //allowedFileTypes: ['image', 'video', 'flash'],
+    //     slugCallback: function(filename) {
+    //        // return filename.replace('(', '_').replace(']', '_');
+    //     }
+    // });
+
+
+    $("#img_url").on("fileuploaded", function (event, data, previewId, index) {
      //！！！我个人使用的时候！！！返回值必须为json格式
      //我在后台程序 单纯的返回了  json_encode('/storage/img/3142353534.jpg')
      //但是在这里仍然需要使用data.response获取图片地址
-     alert(data.response);
-      $('#image').val($('#image').val() + SPEARTER + data.response);
+     // alert(data.response);
+      $('#image').val($('#image').val()  + data.response);
     });
 
 

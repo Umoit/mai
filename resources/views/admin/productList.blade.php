@@ -2,7 +2,6 @@
 
 
 @section('after-css')
-    <link href="{{ URL::asset('/') }}backend/plugins/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
   
   <link href="{{ URL::asset('/') }}backend/plugins/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet" type="text/css" />
   
@@ -32,9 +31,7 @@
 
         
         <div class="panel panel-default">
-            <div class="panel-heading">
-              Responsive Table
-            </div>
+            <div class="panel-heading">商品列表</div>
             <div class="row wrapper">
               <div class="col-sm-5 m-b-xs">
                 <select class="input-sm form-control w-sm inline v-middle">
@@ -70,80 +67,28 @@
                           <th>操作</th>
                         </tr>
                         </thead>
-                <tbody>
-                  <tr>
-                    <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-                    <td>Idrawfast prototype design prototype design prototype design prototype design prototype design</td>
-                    <td><span class="text-ellipsis">{item.PrHelpText1}</span></td>
-                    <td><span class="text-ellipsis">{item.PrHelpText1}</span></td>
-                    <td>
-                      <a href="" class="active" ui-toggle-class=""><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-                    <td>Formasa</td>
-                    <td>8c</td>
-                    <td>Jul 22, 2013</td>
-                    <td>
-                      <a href="" ui-toggle-class=""><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-                    <td>Avatar system</td>
-                    <td>15c</td>
-                    <td>Jul 15, 2013</td>
-                    <td>
-                      <a href="" class="active" ui-toggle-class=""><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-                    <td>Throwdown</td>
-                    <td>4c</td>
-                    <td>Jul 11, 2013</td>
-                    <td>
-                      <a href="" class="active" ui-toggle-class=""><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-                    <td>Idrawfast</td>
-                    <td>4c</td>
-                    <td>Jul 7, 2013</td>
-                    <td>
-                      <a href="" class="active" ui-toggle-class=""><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-                    <td>Formasa</td>
-                    <td>8c</td>
-                    <td>Jul 3, 2013</td>
-                    <td>
-                      <a href="" class="active" ui-toggle-class=""><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-                    <td>Avatar system</td>
-                    <td>15c</td>
-                    <td>Jul 2, 2013</td>
-                    <td>
-                      <a href="" class="active" ui-toggle-class=""><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-                    <td>Videodown</td>
-                    <td>4c</td>
-                    <td>Jul 1, 2013</td>
-                    <td>
-                      <a href="" class="active" ui-toggle-class=""><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
-                    </td>
-                  </tr>
-                </tbody>
+              
+
+                    <tbody>
+                    @foreach ($products as $product)
+
+                      <tr>
+                      <td>{{$product->id}}</td>
+                      <td><img src="{{ URL::asset('/').'app/'.strstr($product->img,";",true) }}" height="25"></td>
+                      <td>{{$product->sku}}</td>
+                      <td>{{$product->name}}</td>
+                      <td>{{$product->price}}</td>
+                      <td>{{$product->position}}</td>
+                      <td>{{$product->updated_at}}</td>
+                      <td>
+                        <button type="button" class="btn btn-success"><a href="{{route('product.show',$product->id)}}">查看</a></button>
+                        <button type="button" class="btn btn-info "><a href="{{route('product.edit',$product->id)}}">编辑</a></button>
+                        <button type="button" class="btn btn-danger "><a href="{{route('product.delete',$product->id)}}">删除</a></button>
+                      </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+
               </table>
             </div>
             <footer class="panel-footer">
@@ -161,62 +106,14 @@
                   <small class="text-muted inline m-t-sm m-b-sm">showing 20-30 of 50 items</small>
                 </div>
                 <div class="col-sm-4 text-right text-center-xs">                
-                  <ul class="pagination pagination-sm m-t-none m-b-none">
-                    <li><a href=""><i class="fa fa-chevron-left"></i></a></li>
-                    <li><a href="">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                    <li><a href="">4</a></li>
-                    <li><a href="">5</a></li>
-                    <li><a href=""><i class="fa fa-chevron-right"></i></a></li>
-                  </ul>
+                  {{ $products->links() }}
+                  
                 </div>
               </div>
             </footer>
           </div>
-        
-       
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              商品列表
-            </div>
-            <div class="table-responsive">
-              <table id="example1" class="table table-bordered table-striped">
-                        <thead>
-                        <tr>
-                          <th>ID</th>
-                          <th>图片</th>
-                          <th>SKU</th>
-                          <th>产品名</th>
-                          <th>价格</th>
-                          <th>位置</th>
-                          <th>更新时间</th>
-                          <th>操作</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach ($products as $product)
 
-                          <tr>
-                          <td>{{$product->id}}</td>
-                          <td><img src="{{ URL::asset('/').'app/'.strstr($product->img,";",true) }}" height="25"></td>
-                          <td>{{$product->sku}}</td>
-                          <td>{{$product->name}}</td>
-                          <td>{{$product->price}}</td>
-                          <td>{{$product->position}}</td>
-                          <td>{{$product->updated_at}}</td>
-                          <td>
-                            <button type="button" class="btn btn-success btn-xs"><a href="{{route('product.show',$product->id)}}">查看</a></button>
-                            <button type="button" class="btn btn-info btn-xs"><a href="{{route('product.edit',$product->id)}}">编辑</a></button>
-                            <button type="button" class="btn btn-danger btn-xs"><a href="{{route('product.delete',$product->id)}}">删除</a></button>
-                          </td>
-                        </tr>
-                        @endforeach
-                        </tbody>
-                       
-                      </table>
-            </div>
-          </div>
+       
     </div>
 
 </div>
@@ -264,19 +161,13 @@
   
 
 @section('after-js')
-  <script src="{{ URL::asset('/') }}backend/plugins/datatables/jquery.dataTables.min.js" ></script>
-  <script src="{{ URL::asset('/') }}backend/plugins/datatables/dataTables.bootstrap.min.js"></script>
   <script src="{{ URL::asset('/') }}backend/plugins/bootstrap-fileinput/js/fileinput.min.js" ></script>
   <script src="{{ URL::asset('/') }}backend/plugins/bootstrap-fileinput/js/locales/zh.js" ></script>
 
 
   <script>
 
-    $(function () {
-      $("#example1").DataTable();
-     
-    });
-
+    
     $('.modal-footer .submit').click(function(){
       $("#bulkCreateProduct").submit();
     })
