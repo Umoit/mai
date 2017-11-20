@@ -88,17 +88,17 @@ class ProductController extends Controller
         
         //dd($input);exit();
         //新建产品
-        $path = "";
-        if ($request->file('image_data')!==null) {
-            foreach ($request->file('image_data') as $value) {
-                $path .=  $value->store('product').';';
-             } 
-        }
+        //$path = "";
+        // if ($request->file('image_data')!==null) {
+        //     foreach ($request->file('image_data') as $value) {
+        //         $path .=  $value->store('product').';';
+        //      } 
+        // }
         
         $newProduct = [
             'name' => $input['name'],
             'sku' => $input['sku'],
-            'img' => $path,
+            'img' => $input['image_path'],
             'title' => $input['title'],
             'keywords' => $input['keywords'],
             'description' => $input['description'],
@@ -113,7 +113,7 @@ class ProductController extends Controller
         $product = Product::findOrFail($request->input('id'));
         $product->update($newProduct);
         //dd($product);
-        return redirect('product')->with(['flash_success' => '更新产品成功!']);
+        return redirect('admin/product')->with(['flash_success' => '更新产品成功!']);
     }
 
     //删除产品

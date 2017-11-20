@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('admin.global')
 
 @section('after-css')
     <link href="{{asset('admin/css/fileinput.min.css') }}" rel="stylesheet" type="text/css" />
@@ -127,6 +127,7 @@
                   <label name="img" class="col-sm-2 control-label">产品图</label>
                   <div class="col-sm-10">
                     <input type="file"  class="file" id="img_url" name="image_data"  accept="image/*" multiple>
+                    <input type="hidden"  id="image" name="image_path"  >
   
                   </div>
                  <!--  <div class="col-sm-6">
@@ -137,7 +138,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">详细内容</label>
                   <div class="col-sm-10">
-                  <textarea name="content" value="{{isset($product->content)?$product->content:''}}" class="form-control" rows="3" placeholder="产品详细 ..."></textarea>
+                  <textarea name="content" value="" class="form-control" rows="3" placeholder="产品详细 ...">{{isset($product->content)?$product->content:''}}</textarea>
                   </div>
                 </div>
                 <div class="form-group">
@@ -155,7 +156,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">描述</label>
                   <div class="col-sm-10">
-                  <textarea name="description" value="{{isset($product->description)?$product->description:''}}" class="form-control" rows="3" placeholder="页面描述 ..."></textarea>
+                  <textarea name="description" value="" class="form-control" rows="3" placeholder="页面描述 ...">{{isset($product->description)?$product->description:''}}</textarea>
                   </div>
                 </div>
                 
@@ -256,7 +257,6 @@
                 "http://lorempixel.com/1920/1080/nature/1"
             ],
             initialPreviewConfig: [
-                {caption: "nature-1.jpg", size: 329892, width: "120px", url: "{$url}", key: 1}
              
             ]
         });
@@ -282,7 +282,7 @@
      //我在后台程序 单纯的返回了  json_encode('/storage/img/3142353534.jpg')
      //但是在这里仍然需要使用data.response获取图片地址
      // alert(data.response);
-      $('#image').val($('#image').val()  + data.response);
+      $('#image').val($('#image').val()  + data.response +';');
     });
 
 

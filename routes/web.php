@@ -10,11 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//前台
+Route::get('/', 'Home\IndexController@index')->name('home');
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+
+
+
+
+
+//后台
 Route::get('admin/login','Admin\IndexController@getLogin');
 Route::post('admin/login','Admin\IndexController@postLogin')->name('admin.login');
 
