@@ -58,10 +58,17 @@
                       @foreach($brands as $brand)
                       <div class="radio col-sm-3">
                         <label class="i-checks">
-                          <input type="radio" name="brand_id" value="{{$brand->id}}" >
+
+                          @if(isset($product))
+                          <input type="radio"  name="brand_id" value="{{$brand->id}}" @if($brand->id == $product->brand_id) checked @endif name="brand_id">
+                          @else
+                          <input type="radio"  name="brand_id" value="{{$brand->id}}">
+                          @endif
+
                           <i></i>
                             {{$brand->name}}
                         </label>
+
                       </div>
                       @endforeach
 

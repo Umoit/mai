@@ -1,4 +1,4 @@
-@extends('backend.master')
+@extends('admin.global')
 
 
 @section('after-css')

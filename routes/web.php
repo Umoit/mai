@@ -37,12 +37,14 @@ Route::group(['prefix' => 'admin',  'middleware' => 'admin'],function(){
 
 	//上传
 	Route::post('image/upload','Admin\FileController@imageUpload')->name('image.upload');
-	
+
+	//分类
+	Route::resource('category','Admin\CategoryController');
 });
 
 
 
-Route::resource('category','Admin\CategoryController');
+
 
 Route::resource('brand','Admin\BrandController');
 

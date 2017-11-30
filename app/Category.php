@@ -8,7 +8,7 @@ class Category extends Model
 {
     protected $table = 'product_categories';
     protected $primaryKey = 'id';
-
+    protected $guarded = [];
 
 
     //生成目录树
