@@ -2,7 +2,6 @@
 
 
 @section('after-css')
-    <link href="{{ URL::asset('/') }}backend/plugins/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
 
 @endsection
 

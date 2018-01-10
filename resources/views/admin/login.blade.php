@@ -21,10 +21,10 @@
   
 
   <div class="container w-xxl w-auto-xs" >
-    <a href class="navbar-brand block m-t">Angulr</a>
+    <a href class="navbar-brand block m-t">后台</a>
     <div class="m-b-lg">
       <div class="wrapper text-center">
-        <strong>Sign in to get in touch</strong>
+        <strong>商城管理后台</strong>
       </div>
       <form name="form" action="{{route('admin.login')}}" method="post" class="form-validation">
         <div class="text-danger wrapper text-center" ng-show="authError">
@@ -32,10 +32,10 @@
         </div>
         <div class="list-group list-group-sm">
           <div class="list-group-item">
-            <input type="email" placeholder="邮件地址"  name="email" class="form-control no-border"  required>
+            <input type="email" placeholder="邮件地址"  name="email" class="form-control no-border" value="ash@qq.com"  required>
           </div>
           <div class="list-group-item">
-             <input type="password" placeholder="密码" name="password" class="form-control no-border"  required>
+             <input type="password" placeholder="密码" name="password" class="form-control no-border" value="ash1688"  required>
           </div>
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
 

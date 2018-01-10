@@ -31,7 +31,7 @@ class CategoryController extends Controller
             ]);
         $category = Category::create($category);
 
-        return redirect('category')->with(['flash_success' => '创建产品分类成功!']);
+        return redirect('admin/category')->with(['flash_success' => '创建产品分类成功!']);
 
     }
 

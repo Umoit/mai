@@ -12,12 +12,26 @@
 */
 //前台
 Route::get('/', 'Home\IndexController@index')->name('home');
+Route::get('product/{id}','Home\IndexController@product')->name('product.front');
+
+//购物车
+	Route::get('cart',  'Home\CartController@index');
+	Route::post('cart/add',  'Home\CartController@add')->name('cart.add');
+
+	Route::get('cart/add','Home\CartController@add');
+	Route::get('cart/show','Home\CartController@show');
+	Route::get('cart/clean','Home\CartController@clean');
+	Route::get('cart/remove','Home\CartController@remove');
+	Route::get('cart/update','Home\CartController@update');
+
+//登录
+Route::get('login', 'Home\IndexController@index')->name('home');
 
 
+//用户
+Route::group(['prefix' => 'user',  'middleware' => 'user'],function(){
 
-
-
-
+}
 
 //后台
 Route::get('admin/login','Admin\IndexController@getLogin');
@@ -40,12 +54,18 @@ Route::group(['prefix' => 'admin',  'middleware' => 'admin'],function(){
 
 	//分类
 	Route::resource('category','Admin\CategoryController');
+
+	//品牌
+	Route::resource('brand','Admin\BrandController');
+
+	//菜单
+	Route::resource('menu','Admin\MenuController');
+
+
 });
 
 
 
 
 
-Route::resource('brand','Admin\BrandController');
 
-Route::resource('menu','Admin\MenuController');

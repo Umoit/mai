@@ -1,22 +1,25 @@
-<!DOCTYPE html>
-<html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title> Ecommerce - Now UI Kit Pro by Creative Tim | Premium Bootstrap 4 UI Kit </title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-    <!--     Fonts and icons     -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <!-- CSS Files -->
-    <link href="{{asset('home/assets/css/bootstrap.min.css')}}" rel="stylesheet" />
-    <link href="{{asset('home/assets/css/now-ui-kit.css')}}" rel="stylesheet" />
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="{{asset('home/assets/css/demo.css')}}" rel="stylesheet" />
-    <!--  Social tags      -->
-    <meta name="keywords" content="bootstrap 4, bootstrap 4 uit kit, bootstrap 4 kit, now ui, now ui kit pro, creative tim, html kit, html css template, web template, bootstrap, bootstrap 4, css3 template, frontend, responsive bootstrap template, bootstrap ui kit, responsive ui kit">
-    <meta name="description" content="Start your development with a beautiful Bootstrap 4 UI kit.">
-   
+<title>尤洪</title>    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="bootstrap 4, bootstrap 4 uit kit, bootstrap 4 kit, now ui, now ui kit pro, creative tim, html kit, html css template, web template, bootstrap, bootstrap 4, css3 template, frontend, responsive bootstrap template, bootstrap ui kit, responsive ui kit">
+<meta name="description" content="Start your development with a beautiful Bootstrap 4 UI kit.">
+
+@yield('meta')
+@yield('before-css')
+
+<link rel="stylesheet" href="{{asset('home/css/style.css')}}"  />
+    <!--[if IE 6]>
+    <script src="js/iepng.js" type="text/javascript"></script>
+        <script type="text/javascript">
+           EvPNG.fix('div, ul, img, li, input, a'); 
+        </script>
+    <![endif]-->    
+@yield('after-css')
+    
+    
+    
 </head>
 
 <body>
@@ -28,34 +31,22 @@
         @yield('content')
 
 
-    @include('home.footer')
+        @include('home.footer')
     </div>
+        <!-- @include('home.right') -->
     
 
 </body>
-<!--   Core JS Files   -->
-<script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
-<script src="../assets/js/core/tether.min.js" type="text/javascript"></script>
-<script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-<script src="../assets/js/plugins/moment.min.js"></script>
-<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-<script src="../assets/js/plugins/bootstrap-switch.js"></script>
-<!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
-<script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
-<!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
-<script src="../assets/js/plugins/bootstrap-selectpicker.js" type="text/javascript"></script>
-<!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGat1sgDZ-3y6fFe6HD7QUziVC6jlJNog"></script>
-<!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
-<script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
-<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-<script src="../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
-<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
-<script src="../assets/js/plugins/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
-<!-- Plugins for Presentation Page -->
-<!-- Sharrre Library -->
-<script src="../assets/js/plugins/presentation-page/jquery.sharrre.js" type="text/javascript"></script>
-<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
-<script src="../assets/js/now-ui-kit.js?v=1.0.1" type="text/javascript"></script>
+
+@yield('before-js')
+<script type="text/javascript" src="{{asset('home/js/jquery-1.8.2.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('home/js/jquery.bxslider_e88acd1b.js')}}"></script>
+<script type="text/javascript" src="{{asset('home/js/jquery-1.8.2.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('home/js/menu.js')}}"></script>    
+<script type="text/javascript" src="{{asset('home/js/select.js')}}"></script>
+<script type="text/javascript" src="{{asset('home/js/lrscroll.js')}}"></script>
+@yield('after-js')
+    
+
 
 </html>

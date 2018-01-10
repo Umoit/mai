@@ -77,7 +77,7 @@ class ProductController extends Controller
         $product = Product::create($newProduct);
 
 
-        return redirect('product')->with(['flash_success' => '创建产品成功!']);
+        return redirect()->back()->with(['flash_success' => '创建产品成功!']);
 
     }
 

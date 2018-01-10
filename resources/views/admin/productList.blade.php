@@ -74,14 +74,14 @@
 
                       <tr>
                       <td>{{$product->id}}</td>
-                      <td><img src="{{ URL::asset('/').'app/'.strstr($product->img,";",true) }}" height="25"></td>
+                      <td><img src="{{asset(strstr($product->img,";",true)) }}" width="30"></td>
                       <td>{{$product->sku}}</td>
                       <td>{{$product->name}}</td>
                       <td>{{$product->price}}</td>
                       <td>{{$product->position}}</td>
                       <td>{{$product->updated_at}}</td>
                       <td>
-                        <button type="button" class="btn btn-success"><a href="{{route('product.show',$product->id)}}">查看</a></button>
+                        <button type="button" class="btn btn-success"><a target="_blank" href="{{route('product.front',$product->id)}}">查看</a></button>
                         <button type="button" class="btn btn-info "><a href="{{route('product.edit',$product->id)}}">编辑</a></button>
                         <button type="button" class="btn btn-danger "><a href="{{route('product.delete',$product->id)}}">删除</a></button>
                       </td>
