@@ -24,14 +24,20 @@ Route::get('product/{id}','Home\IndexController@product')->name('product.front')
 	Route::get('cart/remove','Home\CartController@remove');
 	Route::get('cart/update','Home\CartController@update');
 
-//登录
-Route::get('login', 'Home\IndexController@index')->name('home');
+
 
 
 //用户
-Route::group(['prefix' => 'user',  'middleware' => 'user'],function(){
+Route::group(['prefix' => 'user'],function(){
+	//登录
+	Route::get('login', 'Home\UserController@getLogin');
+	Route::get('register', 'Home\UserController@getRegister')->name('register');
+	Route::post('login','Home\UserController@postLogin')->name('login');
+	Route::post('register','Home\UserController@postRegister');
+	Route::get('logout','Home\UserController@logout')->name('logout');
 
-}
+
+});
 
 //后台
 Route::get('admin/login','Admin\IndexController@getLogin');
@@ -63,7 +69,6 @@ Route::group(['prefix' => 'admin',  'middleware' => 'admin'],function(){
 
 
 });
-
 
 
 

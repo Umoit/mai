@@ -77,7 +77,13 @@
         </span>
         <!--End 所在收货地区 End-->
         <span class="fr">
-            <span class="fl">你好，请<a href="Login.html">登录</a>&nbsp; <a href="Regist.html" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a href="#">我的订单</a>&nbsp;|</span>
+            @if(Auth::guard('web')->check())
+             <span class="fl">你好，{{Auth::guard('admin')->user()->name}}，欢迎回来！<a href="{{route('logout')}}">退出</a>&nbsp;|&nbsp;<a href="#">我的订单</a>&nbsp;|</span>
+
+            
+            @else
+            <span class="fl">你好，请<a href="{{route('login')}}">登录</a>&nbsp; <a href="{{route('register')}}" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a href="#">我的订单</a>&nbsp;|</span>
+            @endif
             <span class="ss">
                 <div class="ss_list">
                     <a href="#">收藏夹</a>

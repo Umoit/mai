@@ -14,7 +14,7 @@
 @section('content')
 <div class="i_bg">
     <div class="postion">
-        <span class="fl">全部 > 美妆个护 > 香水 > 迪奥 > 迪奥真我香水</span>
+        <span class="fl">{{$product->name}}}</span>
     </div>    
     <div class="content">
                             
@@ -41,11 +41,11 @@
         
         <div class="pro_des">
             <div class="des_name">
-                <p>Dior/迪奥 真我香水EDP 克丽丝汀迪奥 全新 30ml</p>
+                <p>{{$product->name}}}</p>
                 “开业巨惠，北京专柜直供”，不光低价，“真”才靠谱！
             </div>
             <div class="des_price">
-                本店价格：<b>￥589</b><br />
+                本店价格：<b>{{$product->price}}</b><br />
                 消费积分：<span>28R</span>
             </div>
             <!-- <div class="des_choice">

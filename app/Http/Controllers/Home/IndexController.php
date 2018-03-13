@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Home;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Product;
+use Gregwar\Captcha\CaptchaBuilder;
+use Session;
+
 class IndexController extends Controller
 {
     //主页
@@ -35,6 +38,7 @@ class IndexController extends Controller
         return $category['url_name'];
     }
 
+  
     
 
 }

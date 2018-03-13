@@ -179,6 +179,8 @@ return [
 
         //购物车
         Overtrue\LaravelShoppingCart\ServiceProvider::class,
+        //验证码
+        Mews\Captcha\CaptchaServiceProvider::class,
 
 
     ],
@@ -231,6 +233,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         //购物车
         'Cart' => Overtrue\LaravelShoppingCart\Facade::class,
+        //验证码
+        'Captcha' => Mews\Captcha\Facades\Captcha::class,
 
     ],
 
