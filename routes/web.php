@@ -24,7 +24,8 @@ Route::get('product/{id}','Home\IndexController@product')->name('product.front')
 	Route::get('cart/remove','Home\CartController@remove');
 	Route::get('cart/update','Home\CartController@update');
 
-
+//支付订单
+	Route::get('pay','Admin\OrderController@index')
 
 
 //用户

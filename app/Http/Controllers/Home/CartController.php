@@ -12,7 +12,7 @@ class CartController extends Controller
     //主页
     public function index(){
         $cart = Cart::all();
-        return view('Home.cartSetp1',compact('cart'));
+        return view('Home.cart',compact('cart'));
 
     }
 
