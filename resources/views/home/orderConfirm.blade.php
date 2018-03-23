@@ -17,7 +17,7 @@
 
 <div class="i_bg">  
     <div class="content mar_20">
-      <img src="images/img2.jpg">        
+      <img src="{{asset('home/images/img2.jpg')}}">        
     </div>
     
     <!--Begin 第二步：确认订单信息 Begin -->
@@ -39,7 +39,7 @@
 
                 <tr>
                 <td>
-                    <div class="c_s_img"><img src="images/c_1.jpg" width="73" height="73"></div>
+                    <div class="c_s_img"><img src="{{asset('home/images/c_1.jpg')}}" width="73" height="73"></div>
                    {{$item->name}}
                 </td>
                 <td align="center">颜色：灰色</td>
@@ -162,7 +162,7 @@
                 </td>
               </tr>
               <tr height="70">
-                <td align="right"><a href="#"><img src="images/btn_sure.gif"></a></td>
+                <td align="right"><a href="#"><img src="{{asset('home/images/btn_sure.gif')}}"></a></td>
               </tr>
             </tbody></table>
 
