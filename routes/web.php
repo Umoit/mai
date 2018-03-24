@@ -24,8 +24,13 @@ Route::get('product/{id}','Home\IndexController@product')->name('product.front')
 	Route::get('cart/remove','Home\CartController@remove');
 	Route::get('cart/update','Home\CartController@update');
 
-//支付订单
+
+Route::group(['middleware' => 'check.user'], function() {
+	//支付订单
 	Route::get('checkout','Home\OrderController@confirm');
+	Route::post('pay','Home\OrderController@pay')->name('pay');
+
+});
 
 
 //用户
@@ -44,7 +49,7 @@ Route::group(['prefix' => 'user'],function(){
 Route::get('admin/login','Admin\IndexController@getLogin');
 Route::post('admin/login','Admin\IndexController@postLogin')->name('admin.login');
 
-Route::group(['prefix' => 'admin',  'middleware' => 'admin'],function(){
+Route::group(['prefix' => 'admin',  'middleware' => 'check.admin'],function(){
 	Route::get('logout','Admin\IndexController@logout');
 	
 	Route::get('test','Admin\IndexController@test')->name('admin.test');

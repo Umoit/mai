@@ -11,6 +11,9 @@ class UserController extends Controller
 {
     //登录
     public function getLogin(){
+        if (Auth::guard('web')->check()) {
+            echo "string";
+        }
     	return view('home.userLogin');
 
     }

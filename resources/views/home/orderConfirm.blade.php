@@ -166,6 +166,12 @@
               </tr>
             </tbody></table>
 
+            <form action="{{route('pay')}}" method="post">
+            <input type="password" value="" name="password" class="l_pwd" />
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <input type="submit"  value="ads">
+            </form>
+
             
           
         </div>

@@ -78,7 +78,7 @@
         <!--End 所在收货地区 End-->
         <span class="fr">
             @if(Auth::guard('web')->check())
-             <span class="fl">你好，{{Auth::guard('admin')->user()->name}}，欢迎回来！<a href="{{route('logout')}}">退出</a>&nbsp;|&nbsp;<a href="#">我的订单</a>&nbsp;|</span>
+             <span class="fl">你好，{{Auth::guard('web')->user()->name}}，欢迎回来！<a href="{{route('logout')}}">退出</a>&nbsp;|&nbsp;<a href="#">我的订单</a>&nbsp;|</span>
 
             
             @else
