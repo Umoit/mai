@@ -34,7 +34,7 @@
                 <td class="car_th" width="130">小计</td>
                 <td class="car_th" width="140">返还积分</td>
               </tr>
-                
+                <img src="{{$result['qr_code']}}">
                 @foreach(Cart::all() as $item)
 
                 <tr>

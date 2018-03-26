@@ -15,9 +15,16 @@ class OrderController extends Controller
     
     public function confirm(){
     	
-    	
+    	$result = \Youzan::request('youzan.pay.qrcode.create', [
+                    'qr_type' => 'QR_TYPE_DYNAMIC',  // 这个就不要动了
+                    'qr_price' => 10,  // 金额：分
+                    'qr_name' => 'iPhone 8 plus 64G 金色', // 收款理由
+                    'qr_source' => '102828399222', // 自定义字段，你可以设置为网站订单号
+                ]);
+        //dd($result);
+
     	//echo Uuid::generate()->node;die();
-    	return view('home.orderConfirm');
+    	return view('home.orderConfirm',compact('result'));
 
 
     }
@@ -46,9 +53,9 @@ class OrderController extends Controller
     		DB::rollback();
     	}
 
-    	
     	Cart::clean();
-    	echo "string";
+           
+    	
     }
 
 }
