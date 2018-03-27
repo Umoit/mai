@@ -105,7 +105,7 @@
                   </li>      
                 </ul>
               </li>
-              <li>
+              <li class="{{ Request::is('admin/order*') ? 'active' : '' }} {{ Request::is('admin/order*') ? 'active' : '' }} {{ Request::is('admin/order*') ? 'active' : '' }}">
                 <a href="" class="auto">
                   <span class="pull-right text-muted">
                     <i class="fa fa-fw fa-angle-right text"></i>
@@ -116,8 +116,8 @@
                 </a>
                 <ul class="nav nav-sub dk">
                 
-                  <li>
-                    <a href="ui_button.html">
+                  <li class="{{ Request::is('admin/order') ? 'active' : '' }}"">
+                    <a href="{{Route('order.index')}}">
                       <span>订单列表</span>
                     </a>
                   </li>

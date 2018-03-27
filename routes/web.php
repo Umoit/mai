@@ -73,6 +73,10 @@ Route::group(['prefix' => 'admin',  'middleware' => 'check.admin'],function(){
 	//菜单
 	Route::resource('menu','Admin\MenuController');
 
+	//订单
+
+	Route::resource('order','Admin\OrderController');
+
 
 });
 

@@ -81,9 +81,9 @@
                       <td>{{$product->position}}</td>
                       <td>{{$product->updated_at}}</td>
                       <td>
-                        <button type="button" class="btn btn-success"><a target="_blank" href="{{route('product.front',$product->id)}}">查看</a></button>
-                        <button type="button" class="btn btn-info "><a href="{{route('product.edit',$product->id)}}">编辑</a></button>
-                        <button type="button" class="btn btn-danger "><a href="{{route('product.delete',$product->id)}}">删除</a></button>
+                        <button type="button" class="btn btn-success btn-xs"><a target="_blank" href="{{route('product.front',$product->id)}}">查看</a></button>
+                        <button type="button" class="btn btn-info btn-xs"><a href="{{route('product.edit',$product->id)}}">编辑</a></button>
+                        <button type="button" class="btn btn-danger btn-xs"><a href="{{route('product.delete',$product->id)}}">删除</a></button>
                       </td>
                     </tr>
                     @endforeach
