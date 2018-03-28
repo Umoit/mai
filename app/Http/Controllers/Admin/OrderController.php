@@ -13,4 +13,10 @@ class OrderController extends Controller
    	$orders = Order::paginate(50);
    	return view('admin.orderList',compact('orders'));
    }
+
+   //显示订单
+   public function show($id){
+   	$order = Order::findOrFail($id);
+   	return view('admin.orderShow',compact('order'));
+   }
 }

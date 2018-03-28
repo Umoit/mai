@@ -80,7 +80,7 @@
                       <td>{{$order->status}}</td>
                       <td>{{$order->created_at}}</td>
                       <td>
-                        <button type="button" class="btn btn-success btn-xs"><a target="_blank" href="">查看</a></button>
+                        <button type="button" class="btn btn-success btn-xs"><a target="_blank" href="{{route('order.show',$order->id)}}">查看</a></button>
                         <button type="button" class="btn btn-info btn-xs"><a href="">编辑</a></button>
                         <button type="button" class="btn btn-danger btn-xs"><a href="">删除</a></button>
                       </td>
