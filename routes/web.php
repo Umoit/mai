@@ -15,7 +15,7 @@ Route::get('/', 'Home\IndexController@index')->name('home');
 Route::get('product/{id}','Home\IndexController@product')->name('product.front');
 
 //购物车
-	Route::get('cart',  'Home\CartController@index');
+	Route::get('cart',  'Home\CartController@index')->name('cart');
 	Route::post('cart/add',  'Home\CartController@add')->name('cart.add');
 
 	Route::get('cart/add','Home\CartController@add');
@@ -27,7 +27,8 @@ Route::get('product/{id}','Home\IndexController@product')->name('product.front')
 
 Route::group(['middleware' => 'check.user'], function() {
 	//支付订单
-	Route::get('checkout','Home\OrderController@confirm');
+	Route::get('checkout','Home\OrderController@checkout')->name('checkout');
+	Route::get('confirm','Home\OrderController@store');
 	Route::post('pay','Home\OrderController@pay')->name('pay');
 
 });
